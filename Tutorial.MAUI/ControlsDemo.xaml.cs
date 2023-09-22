@@ -54,4 +54,14 @@ public partial class ControlsDemo : ContentPage
     {
         infoLabel.Text = $"Marked as Friend";
     }
+
+    private void Slider_OnValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        sliderLabel.Text = $"Slider: {Convert.ToInt32(e.NewValue)}";
+    }
+
+    private void Stepper_OnValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        stepperLabel.Text = $"Stepper: {e.NewValue}";
+    }
 }
