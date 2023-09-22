@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutorial.MAUI.ControlsDemo"
+             Title="ControlsDemo">
+   <ScrollView>
+        <VerticalStackLayout Margin="10" Spacing="5">
+            <ImageButton x:Name="ImgBtn" Source="add_favorite.svg" 
+                         Clicked="imgBtn_Clicked"/>
+            <Button x:Name="btn" Text="Alert" Clicked="btn_Clicked"
+                    HorizontalOptions="Center"/>
+            <Label x:Name="infoLabel"/>
+            <SearchBar x:Name="searchBar" 
+                       SearchButtonPressed="SearchBar_OnSearchButtonPressed"/>
+            <RadioButton CheckedChanged="RadioButton_OnCheckedChanged"
+                         Content="Man" GroupName="sexGrp"
+                         Value="Man"/>
+            <RadioButton CheckedChanged="RadioButton_OnCheckedChanged"
+                         Content="Woman" GroupName="sexGrp"
+                         Value="Woman"/>
+            <Label Text="Just check that button"/>
+            <CheckBox IsChecked="False" Color="AntiqueWhite"
+                      CheckedChanged="CheckBox_OnCheckedChanged"/>
+            <HorizontalStackLayout>
+                <Label x:Name="switchLabel" Text="Do you like love cats?"
+                       VerticalOptions="Center"/>
+                <Switch IsToggled="False" OnColor="Blue" ThumbColor="Bisque"
+                        VerticalOptions="Center"
+                        Toggled="Switch_OnToggled"/>
+            </HorizontalStackLayout>
+
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="add_favorite.svg"
+                               BackgroundColor="LightGreen"
+                               Invoked="SwipeItem_OnInvoked"/>
+                    <SwipeItem Text="Friend"
+                               IconImageSource="add_friend.svg"
+                               BackgroundColor="Green"
+                               Invoked="SwipeItem_OnInvoked_1"/>
+                </SwipeView.LeftItems>
+                <Grid HeightRequest="60" WidthRequest="300"
+                      BackgroundColor="White">
+                    <Image Source="dotnet_bot.svg"/>
+                </Grid>
+            </SwipeView>
+        </VerticalStackLayout>
+   </ScrollView>
+</ContentPage>

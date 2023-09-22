@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutorial.MAUI.GridDemo"
+             Title="GridDemo">
+    <Grid RowSpacing="2" ColumnSpacing="6" RowDefinitions="*,*,*" 
+          ColumnDefinitions="*,*,*">
+        <BoxView Color="Green" Grid.Column="0" Grid.Row="0"/>
+        <Label Grid.Row="0" Grid.Column="0"
+               Text="Welcome to .NET MAUI!"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+        <BoxView Color="Red" Grid.Column="0" Grid.Row="1"/>
+
+        <BoxView Color="SaddleBrown" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</ContentPage>

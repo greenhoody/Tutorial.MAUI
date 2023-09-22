@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutorial.MAUI.ContentPageDemo"
+             Title="ContentPageDemo">
+
+    <VerticalStackLayout Margin="0" Spacing="10" Padding="10">
+       
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    
+        <Frame BorderColor="DarkGrey" Padding="5" CornerRadius="5" HasShadow="True">
+            <VerticalStackLayout Spacing="10">
+                <Button Text="Main Page" Clicked="Button_OnClicked"/>
+                <Button Text="Flyout Page" Clicked="Button_Flyout"/>
+                <Button Text="Tabbed Page" Clicked="Button_Tabbed"/>
+                <Button Text="Stack Layout Page" Clicked="Button_Stack" />
+                <Button Text="Horizontal Layout Page" Clicked="Button_Horizontal"/>
+                <Button Text="Grid Layout Page" Clicked="Button_Grid"/>
+                <Button Text="Calculator" Clicked="Button_Calc"/>
+                <Button Text="Flex Layout Page" Clicked="Button_Flex"/>
+                <Button Text="Absolute Layout Page" Clicked="Button_Absolute"/>
+                <Button Text="Controls Page" Clicked="Button_Controls"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+
+</ContentPage>

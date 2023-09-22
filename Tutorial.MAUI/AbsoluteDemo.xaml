@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutorial.MAUI.AbsoluteDemo"
+             Title="AbsoluteDemo">
+    <AbsoluteLayout>
+        <Label 
+            Text="No flag" AbsoluteLayout.LayoutBounds=".05,.05,100,50"
+            BackgroundColor="Red" TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="SizeProportional" AbsoluteLayout.LayoutBounds="120,0,.3,.25"
+            AbsoluteLayout.LayoutFlags="SizeProportional"
+            BackgroundColor="Green" TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="All flag" AbsoluteLayout.LayoutBounds=".5,.5,.25,.25"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="Green" TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </AbsoluteLayout>
+</ContentPage>
