@@ -64,4 +64,9 @@ public partial class ControlsDemo : ContentPage
     {
         stepperLabel.Text = $"Stepper: {e.NewValue}";
     }
+
+    private void Entry_OnCompleted(object sender, EventArgs e)
+    {
+        infoLabel.Text = $"Hello {entry.Text}";
+    }
 }

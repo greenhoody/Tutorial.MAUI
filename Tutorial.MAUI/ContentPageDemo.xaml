@@ -23,6 +23,7 @@
                 <Button Text="Flex Layout Page" Clicked="Button_Flex"/>
                 <Button Text="Absolute Layout Page" Clicked="Button_Absolute"/>
                 <Button Text="Controls Page" Clicked="Button_Controls"/>
+                <Button Text="List View Page" Clicked="Button_ListView"/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>

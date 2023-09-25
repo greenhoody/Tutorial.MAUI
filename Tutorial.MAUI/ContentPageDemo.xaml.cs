@@ -57,4 +57,9 @@ public partial class ContentPageDemo : ContentPage
     {
         Navigation.PushAsync(new ControlsDemo());
     }
+
+    private void Button_ListView(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ListViewDemo());
+    }
 }

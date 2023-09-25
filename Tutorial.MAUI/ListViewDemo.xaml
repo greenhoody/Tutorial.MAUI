@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maui="clr-namespace:Tutorial.MAUI"
+             x:Class="Tutorial.MAUI.ListViewDemo"
+             Title="ListViewDemo">
+    <ScrollView>
+        <VerticalStackLayout>
+            <ListView x:Name ="Animals" ItemsSource="{Binding MyAnimals}"
+                      RowHeight="100" ItemSelected="Animals_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}"
+                                   ImageSource="{Binding Image}">
+                            <ImageCell.ContextActions>
+                                <MenuItem Text="Delete" IsDestructive="True"
+                                          Command="{Binding Path=BindingContext.DeletePlayer,
+                                    Source ={Reference Animals}}"
+                                          CommandParameter="{Binding .}"/>
+                            </ImageCell.ContextActions>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Carousel template" FontSize="24"/>
+
+            <CarouselView ItemsSource="{Binding MyAnimals}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame CornerRadius="5" Margin="5" HeightRequest="250"
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                   HasShadow="True">
+                                <StackLayout>
+                                    <Label Text="{Binding Name}"
+                                           FontFamily="OpenSans_Semibold.ttf" FontAttributes="Italic"
+                                           FontSize="Large" 
+                                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    <Image Source="{Binding Image}" Aspect="Fill" 
+                                           HeightRequest="150" WidthRequest="150"
+                                           HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <StackLayout>
+                <Label FontFamily="Icons" Text="&#xF115;" FontSize="Large"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
